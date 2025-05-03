@@ -13,7 +13,7 @@ body {
   height: 100%;
   margin: 0 auto;
   font-family: 'Mohave', sans-serif;
-  background-image: url(images/bg.png);
+  background-image: url(images/bg-mob.png);
   background-position: center;
   background-size: auto 762px;
   background-repeat: no-repeat;
@@ -22,6 +22,7 @@ body {
 
 @media (1920px <= width) {
   body {
+    background-image: url(images/bg.png);
     background-size: cover;
     background-position: top center;
   }
@@ -29,6 +30,8 @@ body {
 
 .header {
   padding: 10px 10px 0 10px;
+  position: relative;
+  z-index: 1;
 }
 
 @media (1920px <= width) {
@@ -246,4 +249,50 @@ body {
     align-items: center;
     padding: 0;
   }
+}
+
+.main {
+  position: relative;
+  margin-top: -70px;
+  padding-top: 70px;
+}
+
+.hero {
+
+}
+
+.hero__title {
+  padding: 20px 10px 0;
+  background: linear-gradient(180deg, #DBDDDD 15.37%, #505E79 73.15%);
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 90px;
+  line-height: 80%;
+  letter-spacing: -10px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hero__bg-container {
+  background-image: url(images/image.png);
+  width: 290px;
+  height: 312px;
+  position: absolute;
+  top: 70px;
+  left: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero__bg-shadow {
+  position: absolute;
+  width: 292px;
+  height: 42px;
+  top: 415px;
+  left: 10px;
+  background-image: url(images/Shadow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
