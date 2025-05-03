@@ -20,7 +20,7 @@ body {
   background-color: #030303;
 }
 
-@media (1920px >= width) {
+@media (1920px <= width) {
   body {
     background-size: cover;
     background-position: top center;
@@ -31,10 +31,26 @@ body {
   padding: 10px 10px 0 10px;
 }
 
+@media (1920px <= width) {
+  .header {
+    padding: 20px 20px 0 20px;
+  }
+}
+
 .nav {
   display: grid;
   position: relative;
-  
+}
+
+@media (1920px <= width) {
+  .nav {
+    padding: 0 20px;
+    grid-template-columns: 200px 1fr;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    background-color: rgba(84, 112, 137, 0.15);
+    backdrop-filter: blur(20px);  
+  }
 }
 
 .nav__logo-and-switch {
@@ -47,6 +63,16 @@ body {
   border-radius: 5px;
   background-color: rgba(84, 112, 137, 0.15);
   backdrop-filter: blur(20px);
+}
+
+@media (1920px <= width) {
+  .nav__logo-and-switch {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    backdrop-filter: none;
+    padding: 0;
+  }
 }
 
 .logo {
@@ -70,6 +96,18 @@ body {
   background-image: url(images/close.png);
 }
 
+@media (1920px <= width) {
+  .nav__switch {
+    display: none;
+  }
+}
+
+@media (1920px <= width) {
+  .nav__menu-list-container {
+    height: 100%;
+  }
+}
+
 .nav__menu-list-and-btn {
   display: none;
   flex-direction: column;
@@ -88,6 +126,19 @@ body {
   display: flex;
 }
 
+@media (1920px <= width) {
+  .nav__menu-list-and-btn.nav__menu-list-and-btn {
+    display: grid;
+    padding: 0;
+    grid-template-columns: 1fr 200px;
+    position: static;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+}
+
 .nav__menu-list {
   display: flex;
   flex-direction: column;
@@ -95,6 +146,17 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@media (1920px <= width) {
+  .nav__menu-list {
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0;
+    column-gap: 40px;
+  }
 }
 
 .nav__menu-item {
@@ -112,6 +174,27 @@ body {
   border-left-color: rgba(36, 97, 254, 1);
   background-color: rgba(255, 255, 255, 0.05);
   color: #fff;
+}
+
+@media (1920px <= width) {
+  .nav__menu-item {
+    margin-left: 0;
+    margin-bottom: -1px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .nav__menu-item:hover {
+    border-bottom-color: rgba(36, 97, 254, 1);
+    background-color: transparent;
+    color: #fff;
+  }
 }
 
 .nav__btn {
@@ -145,6 +228,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   background-color: #fff;
+  white-space: nowrap;
 }
 
 .get-in-touch-btn__icon {
@@ -153,4 +237,13 @@ body {
   background-size: contain;
   width: 9px;
   height: 9px;
+}
+
+@media (1920px <= width) {
+  .nav__btn {
+    flex-direction: row-reverse;
+    column-gap: 10px;
+    align-items: center;
+    padding: 0;
+  }
 }
