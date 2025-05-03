@@ -412,3 +412,53 @@ body {
   top: 341px;
   left: 295px;
 }
+
+.quotes-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  row-gap: 40px;
+  margin: 50px 0 30px;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.quote__title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+}
+
+.quote__author {
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  color: rgba(128, 133, 141, 1);
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.quote__author::before {
+  content: '';
+  display: block;
+  width: 17px;
+  height: 11px;
+  background-image: url(images/Vector\ \(1\).png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
