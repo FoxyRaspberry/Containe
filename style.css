@@ -296,3 +296,38 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.testimonials-section {
+
+}
+
+.testimonial {
+  width: 300px;
+  /* top: 660px;
+  left: 65px; */
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px)
+}
+
+.testimonial__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.testimonial__description {
+  margin: 10px 0 60px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 120%;
+  color: rgba(128, 133, 141, 1);
+}
+
+.testimonial__logo {
+
+}
