@@ -264,6 +264,7 @@ body {
   .main {
     margin-top: -80px;
     padding-top: 0;
+    height: 1002px;
   }
 }
 
@@ -358,6 +359,28 @@ body {
   backdrop-filter: blur(20px)
 }
 
+@media (1920px <=width) {
+  .testimonial {
+    position: absolute;
+    width: 300px;
+  }
+  
+  .testimonial--dhl {
+    top: 660px;
+    left: 40px;
+  }
+  
+  .testimonial--fedex {
+    top: 842px;
+    left: 944px;
+  }
+  
+  .testimonial--amazon {
+    top: 757px;
+    left: 1590px;
+  }
+}
+
 .testimonial__title {
   margin: 0;
   font-weight: 500;
@@ -423,6 +446,13 @@ body {
   backdrop-filter: blur(20px);
 }
 
+@media (1920px <=width) {
+  .testimonials-section__point {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .testimonials-section__point::before {
   content: '';
   margin: auto;
@@ -431,6 +461,13 @@ body {
   height: 4px;
   border-radius: 50%;
   background-color: #fff;
+}
+
+@media (1920px <=width) {
+  .testimonials-section__point::before {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .testimonials-section__point--active::before {
@@ -443,15 +480,59 @@ body {
   left: 7px;
 }
 
+@media (1920px <=width) {
+  .testimonials-section__point--dhl {
+    top: 660px;
+    left: 553px;
+  }
+}
+
 .testimonials-section__point--fedex {
   top: 372px;
   left: 59px;
+}
+
+@media (1920px <=width) {
+  .testimonials-section__point--fedex {
+    top: 842px;
+    left: 692px;
+  }
 }
 
 .testimonials-section__point--amazon {
   top: 341px;
   left: 295px;
 }
+
+@media (1920px <=width) {
+  .testimonials-section__point--amazon {
+    top: 757px;
+    left: 1337px;
+  }
+}
+
+@media (1920px <=width) {
+  .testimonials-section__point::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 34px;
+    display: block;
+    width: 220px;
+    height: 105px;
+    background-image: url(images/line.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .testimonials-section__point--reverse::after {
+    transform: scaleX(-1);
+    left: auto;
+    right: 34px;
+  }
+}
+
 
 .quotes-section {
   display: flex;
