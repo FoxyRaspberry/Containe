@@ -436,6 +436,12 @@ body {
   height: 40px;
 }
 
+@media (1920px <=width) {
+  .testimonials-section__control {
+    display: none;
+  }
+}
+
 .testimonials-section__point {
   position: absolute;
   display: flex;
@@ -542,10 +548,36 @@ body {
   margin: 50px 0 30px;
 }
 
+@media (1920px <=width) {
+  .quotes-section {
+    flex-direction: row;
+    padding: 0 20px;
+    row-gap: 0;
+    justify-content: space-between;
+    /* margin: 50px 0 30px; */
+  }
+}
+
+
 .quote {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+}
+
+@media (1920px <=width) {
+  .quote {
+    width: 410px;
+  }
+
+  .quote--align-right {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .quote--align-right .quote__author {
+    flex-direction: row-reverse;
+  }
 }
 
 .quote__title {
