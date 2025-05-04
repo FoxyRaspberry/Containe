@@ -408,12 +408,18 @@ body {
 }
 
 .testimonials-section__previous-arrow {
-  background-image: url(images/arrow-disabled-left.svg);
+  background-image: url(images/arrow-active-right.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   width: 40px;
   height: 40px;
+  transform: rotateZ(180deg);
+}
+
+.testimonials-section__previous-arrow--disabled {
+  background-image: url(images/arrow-disabled-left.svg);
+  transform: rotateZ(0);
 }
 
 .testimonials-section__dot {
@@ -434,6 +440,11 @@ body {
   background-position: center;
   width: 40px;
   height: 40px;
+}
+
+.testimonials-section__next-arrow--disabled {
+  background-image: url(images/arrow-disabled-left.svg);
+  transform: rotateZ(180deg);
 }
 
 @media (1920px <=width) {

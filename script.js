@@ -15,6 +15,8 @@ function initNav() {
 function initCarousel() {
   let currentIndex = 0;
   const dotActiveModifier = `testimonials-section__dot--active`;
+  const previousArrowDisabledModifier = `testimonials-section__previous-arrow--disabled`;
+  const nextArrowDisabledModifier = `testimonials-section__next-arrow--disabled`;
   const [cardListElement] = document.getElementsByClassName('testimonials-section__card-list');
   const [previousArrowElement] = document.getElementsByClassName('testimonials-section__previous-arrow');
   const [nextArrowElement] = document.getElementsByClassName('testimonials-section__next-arrow');
@@ -27,6 +29,8 @@ function initCarousel() {
     dotElements[currentIndex].classList.remove(dotActiveModifier);
     currentIndex--;
     dotElements[currentIndex].classList.add(dotActiveModifier);
+
+    actualizeArrows(currentIndex);
 
     const cardListMarginLeft = currentIndex*(-300);
     cardListElement.setAttribute('style', `margin-left: ${cardListMarginLeft}px`);
@@ -42,9 +46,25 @@ function initCarousel() {
     currentIndex++;
     dotElements[currentIndex].classList.add(dotActiveModifier);
 
+    actualizeArrows(currentIndex);
+
     const cardListMarginLeft = currentIndex*(-300);
     cardListElement.setAttribute('style', `margin-left: ${cardListMarginLeft}px`);
   }
 
   nextArrowElement.addEventListener('click', nextArrowClickHandler);
+
+  function actualizeArrows(currentIndex) {
+    if (currentIndex === 0) {
+      previousArrowElement.classList.add(previousArrowDisabledModifier);
+    } else {
+      previousArrowElement.classList.remove(previousArrowDisabledModifier);
+    }
+
+    if (currentIndex === 2) {
+      nextArrowElement.classList.add(nextArrowDisabledModifier);
+    } else {
+      nextArrowElement.classList.remove(nextArrowDisabledModifier);
+    }
+  }
 }
