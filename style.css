@@ -11,7 +11,7 @@ html {
 
 body {
   min-width: 320px;
-  max-width: 1920px;
+  max-width: 320px;
   height: 100%;
   margin: 0 auto;
   font-family: 'Mohave', sans-serif;
@@ -24,6 +24,7 @@ body {
 
 @media (1920px <=width) {
   body {
+    max-width: 1920px;
     background-image: url(images/bg.png);
     background-size: cover;
     background-position: top center;
@@ -259,8 +260,22 @@ body {
   padding-top: 70px;
 }
 
+@media (1920px <=width) {
+  .main {
+    margin-top: -80px;
+    padding-top: 0;
+  }
+}
+
 .hero {
   height: 395px;
+}
+
+@media (1920px <=width) {
+  .hero {
+    height: 395px;
+    padding-top: 80px;
+  }
 }
 
 .hero__title {
@@ -271,10 +286,18 @@ body {
   font-weight: 600;
   font-size: 90px;
   line-height: 80%;
-  letter-spacing: -10px;
+  letter-spacing: -0.1em;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
+}
+
+@media (1920px <=width) {
+  .hero__title {
+    font-size: 402px;
+    line-height: 100%;
+    transform: translateX(-23px);
+  }
 }
 
 .hero__bg-container {
@@ -288,6 +311,15 @@ body {
   background-repeat: no-repeat;
 }
 
+@media (1920px <=width) {
+  .hero__bg-container {
+    width: 801px;
+    height: 860px;
+    top: 0;
+    left: 560px;
+  }
+}
+
 .hero__bg-shadow {
   position: absolute;
   width: 292px;
@@ -297,6 +329,16 @@ body {
   background-image: url(images/Shadow.png);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media (1920px <=width) {
+  .hero__bg-shadow {
+    width: 921px;
+    height: 133px;
+    top: 930px;
+    left: 467px;
+    background-image: url(images/Shadow-big.png);
+  }
 }
 
 .testimonials-section {}
